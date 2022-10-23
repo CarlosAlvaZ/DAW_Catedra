@@ -1,0 +1,16 @@
+{
+    "UsuarioPrueba1": {
+        "pwd": 1234,
+        "registro": 12000,
+        "record": [
+            {
+                "peso": 75,
+                "altura": 160,
+                "edad": 18,
+                "sexo": "hombre"
+            }
+        ],
+        "rutinas": {},
+        "active": false
+    }
+}

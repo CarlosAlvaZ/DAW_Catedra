@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../src/css/main.css">
+    <script src="./index.js" defer></script>
+    <link rel="shortcut icon" href="../src/icono.png">
+    <title>Ingresar datos de salud || Estar Bien </title>
+</head>
+<body>
+    <main>
+        <div class="image">
+            <img src="../src/logo.png" alt="IMAGE">
+        </div>
+        <div class="title">
+            <h1>Ingresa tus datos de salud:</h1>
+        </div>
+
+        <div class="group group1">
+            <div class="input-div sex">
+                <h2>Sexo:</h2>
+                <select name="gender" id="gender" class="inputSex">
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+            </div>
+
+            <div class="input-div age">
+                <h2>Edad:</h2>
+                <input type="number" min="1" max="100" class="inputAge">
+            </div>
+        </div>
+
+        <div class="group group2">
+            <div class="input-div height">
+                <h2>Estatura</h2>
+                <input type="number" min="1" max="1000" class="inputHeight">
+                <select name="h-unit" class="unit selectHeight">
+                    <option value="cm">Cm</option>
+                    <option value="in">In</option>
+                </select>
+            </div>
+
+            <div class="input-div wheight">
+                <h2>Peso:</h2>
+                <input type="number" min="1" max="1000" class="inputWheight">
+                <select name="w-unit" class="unit selectWheight">
+                    <option value="kg">Kg</option>
+                    <option value="lbs">Lbs</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="date">
+            <h3>Fecha de ingreso de datos: <span class="date-target"></span></h3>
+        </div>
+
+        <div class="button">
+            <button>Registrar Datos</button>
+        </div>
+    </main>
+
+    <div class="alerts">
+        <template class="template-alert">
+            <div class="alert">
+                <span>
+                    Ingrese los datos solicitados
+                </span>
+            </div>
+        </template>
+    </div>
+</body>
+</html>

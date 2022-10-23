@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="../src/icono.png">
+    <script src="./index.js" defer></script>
+    <title>Rutinas || Estar Bien</title>
+</head>
+<body>
+
+    <nav>
+        <div class="image">
+            <div>
+                <img src="../src/user.png" alt="USER" class="iconlike">
+            </div>
+        </div>
+        <hr>
+        <div class="icon icon1">
+            <div class="iconlike-div">
+                <img src="../src/icons/clock.png" alt="Rutinas" class="iconlike">
+            </div>
+        </div>
+        <div class="icon icon2">
+            <div class="iconlike-div">
+                <img src="../src/icons/star.png" alt="Progreso" class="iconlike">
+            </div>
+        </div>
+        <div class="icon icon3 selected">
+            <div class="iconlike-div">
+                <img src="../src/icons/play.png" alt="Empezar" class="iconlike">
+            </div>
+        </div>
+        <div class="toggler iconlike-div">
+            <img src="../src/icons/sandwich.png" alt="Mostrar" class="sandwich">
+        </div>
+    </nav>
+
+    <main>
+        <div class="banner">
+            <img src="../src/background1.jpeg" alt="Banner">
+        </div>
+
+        <div class="titles">
+            <h1 class="name">Nombre Rutina</h1>
+            <input type="text" class="i-name hidden">
+            <hr>
+            <h3 class="duration">Duracion</h3>
+            <img src="../src/icons/edit_gray.png" alt="Editar" class="edit">
+        </div>
+
+        <div class="list">
+            <div class="list-element">
+                <div class="data">
+                    <h2 class="e-name">Nombre ejericio 1</h2>
+                    <h3 class="e-duration">Duracion</h3>
+                </div>
+                <div class="play">
+                    <img src="../src/icons/play.png" alt="Empezar">
+                </div>
+            </div>
+
+            <div class="list-element">
+                <div class="data">
+                    <h2 class="e-name">Nombre ejericio 2</h2>
+                    <h3 class="e-duration">Duracion</h3>
+                </div>
+                <div class="play">
+                    <img src="../src/icons/play.png" alt="Empezar">
+                </div>
+            </div>
+
+            <div class="list-element">
+                <div class="data">
+                    <h2 class="e-name">Nombre ejericio 3</h2>
+                    <h3 class="e-duration">Duracion</h3>
+                </div>
+                <div class="play">
+                    <img src="../src/icons/play.png" alt="Empezar">
+                </div>
+            </div>
+
+            <template class="t-listelement">
+                <div class="list-element">
+                    <div class="data">
+                        <h2 class="e-name">Nombre ejericio 3</h2>
+                        <h3 class="e-duration">Duracion</h3>
+                    </div>
+                    <div class="play hidden">
+                        <img src="../src/icons/play.png" alt="Empezar">
+                    </div>
+                </div>
+            </template>
+
+            <template class="t-createNewForm">
+                <div class="list-element new">
+                    <div class="data new-data">
+                        <input class="new-name" type="text" placeholder="Nombre de Nuevo Ejercicio">
+                        <input class="new-duration" type="number" placeholder="Duracion de Nuevo Ejercicio (min)" min="0">
+                    </div>
+                    <input class="new-reference" type="text" placeholder="Añadir Referencia">
+                    <div class="buttons">
+                        <div class="done">
+                            <img src="../src/icons/check.png" alt="Hecho">
+                        </div>
+                        <div class="cancel">
+                            <img src="../src/icons/cancel.png" alt="Cancelar">
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <div class="icons">
+            <div class="add hidden">
+                <img src="../src/icons/add.png" alt="Añadir">
+            </div>
+            <div class="trash hidden">
+                <img src="../src/icons/trash_can.png" alt="Eliminar">
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

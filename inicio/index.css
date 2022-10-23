@@ -1,0 +1,313 @@
+.hidden {
+    display: none !important;
+}
+
+.hidden::after {
+    display: none !important;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 6%;
+    height: 100vh;
+    background-color: var(--pantone-c);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.iconlike-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+.iconlike {
+    width: 50%;
+    height: 50%;
+}
+
+nav .image div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .image img {
+    width: 60%;
+    height: 60%;
+}
+
+
+nav .image {
+    width: 80%;
+    margin: 35px auto 15px auto;
+}
+
+nav hr {
+    width: 70%;
+    height: 0;
+    border: 2px solid white;
+    border-radius: 100px;
+    margin: 20px auto;
+}
+
+nav .icon {
+    padding: 80px auto;
+    width: 100%;
+    color: white;
+    position: relative;
+    transition: opacity 100ms ease-in;
+}
+
+nav .icon:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+nav .icon:hover img {
+    transform: scale(0.99);
+}
+
+nav .icon::after{
+    transition: all 100ms ease-in;
+}
+
+nav .icon:hover ::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 10000;
+}
+
+nav .selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card .toggler:hover{
+    cursor: pointer;
+}
+
+.card .toggler:hover img{
+    opacity: 0.8;
+}
+
+.toggler img{
+    width: 70%;
+    opacity: 0.5;
+    transition: all 100ms ease;
+}
+
+main {
+    margin-left: 6%;
+    width: 94%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Source Sans';
+    position: relative;
+}
+
+main .banner {
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    box-shadow: inset 0 0 100px black;
+    z-index: -1;
+}
+
+main .banner img {
+    width: 100%;
+    z-index: inherit;
+}
+
+main .banner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    background-color: black;
+    opacity: 0.1;
+}
+
+main > .greeting {
+    color: var(--gray-9);
+    margin: 30px auto;
+    padding: 10px 40px;
+    font-size: 22px;
+    border-bottom: 4px solid var(--gray-9);
+    display: flex;
+    justify-content: center;
+}
+
+main > .title {
+    color: var(--gray-10);
+    width: 90%;
+    padding: 0 15px;
+    border-bottom: 4px solid var(--gray-10);
+}
+
+.cards {
+    margin: 40px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 30%;
+    border: 4px solid var(--gray-9);
+    position: relative;
+}
+
+.card .image {
+    height: 150px;
+    border-bottom: 4px solid var(--gray-9);
+    background-color: var(--pantone-c);
+}
+
+.card .content {
+    height: 40%;
+    display: flex;
+    padding: 10px;
+}
+
+
+.card .content .text{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card .start {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .start div {
+    background-color: var(--pantone-c);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 3px;
+}
+
+.card .start div:hover{
+    background-color: var(--pantone-a);
+    cursor: pointer;
+}
+
+.card .start img {
+    width: 35%;
+    height: 35%;
+}
+
+.card .toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.card .toggle .options::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid var(--gray-10);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    right: 30px;
+    top: -20px;
+}
+
+.card .toggle .toggler {
+    width: 20%;
+    margin-top: 10px;
+}
+
+.card .toggle .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    right: -15px;
+    width: 100px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    background-color: var(--gray-10);
+}
+
+.card .toggle .options .option {
+    margin: 10px auto;
+}
+
+.card .toggle .options .danger {
+    color: red;
+}
+
+.card .toggle .options .option:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.create {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create .icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--gray-9);
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: none;
+    margin: 20px auto 40px auto;
+}
+
+.create .icon:hover {
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+}
+
+.create .icon img {
+    width: 50%;
+    height: 50%;
+}
+
+

@@ -1,0 +1,22 @@
+{
+    "bajo": {
+        "Rutina #1": {
+            "Press de banca": {
+                "duracion": 15,
+                "referencia": "#"
+            },
+            "Sentadillas": {
+                "duracion": 20,
+                "referencia": "#"
+            },
+            "Press de hombros": {
+                "duracion": 15,
+                "referencia": "#"
+            },
+            "Levantamiento de mancuernas": {
+                "duracion": 10,
+                "referencia": "#"
+            }
+        }
+    }
+}

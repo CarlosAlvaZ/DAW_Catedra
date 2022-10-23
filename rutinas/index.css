@@ -1,0 +1,373 @@
+.hidden {
+    display: none !important;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 6%;
+    height: 100vh;
+    background-color: var(--pantone-c);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.iconlike-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+.iconlike {
+    width: 50%;
+    height: 50%;
+}
+
+nav .image div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .image img {
+    width: 60%;
+    height: 60%;
+}
+
+
+nav .image {
+    width: 80%;
+    margin: 35px auto 15px auto;
+}
+
+nav hr {
+    width: 70%;
+    height: 0;
+    border: 2px solid white;
+    border-radius: 100px;
+    margin: 20px auto;
+}
+
+nav .icon {
+    padding: 80px auto;
+    width: 100%;
+    color: white;
+    position: relative;
+    transition: opacity 100ms ease-in;
+}
+
+nav .icon:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+nav .icon:hover img {
+    transform: scale(0.99);
+}
+
+nav .icon::after{
+    transition: all 100ms ease-in;
+}
+
+nav .icon:hover ::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 10000;
+}
+
+nav .selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card .toggler:hover{
+    cursor: pointer;
+}
+
+.card .toggler:hover img{
+    opacity: 0.8;
+}
+
+.toggler img{
+    width: 70%;
+    opacity: 0.5;
+    transition: all 100ms ease;
+}   
+
+main {
+    margin-left: 6%;
+    width: 94%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Source Sans';
+    position: relative;
+}
+
+main .banner {
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    box-shadow: inset 0 0 100px black;
+    z-index: -1;
+}
+
+main .banner img {
+    width: 100%;
+    z-index: inherit;
+}
+
+main .banner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    background-color: black;
+    opacity: 0.1;
+}
+
+main .titles {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 90%;
+    padding: 10px;
+    border-bottom: 3px solid var(--gray-10);
+    margin: 40px auto 10px auto;
+}
+
+main .titles .name {
+    justify-self: left;
+    color: var(--gray-9);
+}
+
+main .titles input {
+    border: none;
+    border-bottom: 2px solid var(--gray-10);
+    font-size: 30px;
+    color: var(--gray-9);
+    padding: 5px;
+}
+
+main .titles hr {
+    width: 0;
+    height: 30px;
+    margin: auto 20px;
+    border: 2px solid var(--gray-7);
+}
+
+main .titles .duration {
+    font-size: 22px;
+    color: var(--gray-8);
+}
+
+main .titles img {
+    width: 40px;
+    margin: auto 10px auto auto;
+}
+
+main .titles img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+main .list {
+    width: 85%;
+    margin: 20px auto 50px auto;
+}
+
+main .list .list-element {
+    padding: 10px 0 10px 30px;
+    border-left: 4px solid var(--gray-6);
+    border-right: 4px solid var(--gray-6);
+    border-bottom: 2px solid var(--gray-6);
+    border-top: 2px solid var(--gray-6);
+    display: flex;
+    background-color: white;
+    user-select: none;
+}
+
+main .list .list-element:first-child{
+    border-top: 4px solid var(--gray-6);
+    border-radius: 30px 10px 0 0;
+}
+
+main .list .list-element:last-child{
+    border-bottom: 4px solid var(--gray-6);
+    border-radius: 0 0 10px 10px;
+}
+
+main .list .list-element:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+main .list .list-element h3 {
+    color: var(--gray-7);
+}
+
+main .list .list-element .play {
+    margin: auto 30px auto auto;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-8);
+    border-radius: 50%;
+    padding: 0 0 0 5px;
+}
+
+main .list .list-element .play:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+main .list .list-element .play img {
+    width: 40%;
+    height: 40%;
+}
+
+main .list .list-element[class~='new']:hover {
+    cursor: auto;
+    transform: none;
+    box-shadow: none;
+}
+
+main .list .list-element[class~='new'] .data{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .list .list-element[class~='new'] input {
+    outline:none;
+    border: none;
+    padding: 10px;
+}
+
+main .list .list-element[class~='new'] .new-name {
+    border-bottom: 4px solid var(--gray-10);
+    font-size: 20px;
+}
+
+main .list .list-element[class~='new'] .new-duration {
+    border-bottom: 2px solid var(--gray-7);
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+main .list .list-element[class~='new'] .new-reference {
+    color: blue;
+    font-size: 18px;
+    height: 30px;
+    margin: 10px 0 0 40px;
+    border-bottom: 4px solid blue;
+    padding: 15px;
+}
+
+main .list .list-element[class~='new'] .new-reference::placeholder{
+    color: rgba(0, 0, 255, 0.7);
+}
+
+main .list .list-element[class~='new'] .buttons {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto 0 auto auto;
+}
+
+main .list .list-element[class~='new'] .buttons div {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .list .list-element[class~='new'] .buttons div:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+main .list .list-element[class~='new'] .buttons .done {
+    background-color: var(--pantone-c);
+}
+
+main .list .list-element[class~='new'] .buttons .cancel {
+    background-color: var(--pantone-e);
+}
+
+main .list .list-element[class~='new'] .buttons div img {
+    width: 50%;
+    height: 50%;
+}
+
+.icons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto 60px auto;
+}
+
+.icons div {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.icons div img {
+    width: 50%;
+    height: 50%;
+}
+
+.icons .add {
+    background-color: white;
+    border: 4px solid var(--gray-9);
+}
+
+.icons .add:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+.icons .trash {
+    background-color: var(--pantone-e);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+}
+
+.dragging {
+    opacity: 0.5;
+    background-color: var(--gray-3) !important;
+}

@@ -1,0 +1,33 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Aricum';
+    src: url(../Tipografias/AricumVariableConcept/AcuminVariableConcept.otf);
+}
+
+@font-face {
+    font-family: 'Source Sans';
+    src: url(../Tipografias/SourceSans/SourceSansVariable-Roman.otf);
+}
+
+:root {
+    --gray-1: #f2f2f2;
+    --gray-2: #e6e6e6;
+    --gray-3: #cccccc;
+    --gray-4: #b3b3b3;
+    --gray-5: #999999;
+    --gray-6: #808080;
+    --gray-7: #666666;
+    --gray-8: #4d4d4d;
+    --gray-9: #333333;
+    --gray-10: #1a1a1a;
+    --pantone-a: #044019; 
+    --pantone-b: #34d96e;
+    --pantone-c: #148c3e;
+    --pantone-d: #400200;
+    --pantone-e: #8c1814;
+}

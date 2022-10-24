@@ -20,23 +20,40 @@ enviar.addEventListener('click', (e)=>{
         if(p1 !== p2) {
             alert('Las contraseñas no coinciden')
         } else {
-            let userData = new FormData()
-            userData.append('usuario', uIn)
-            userData.append('password', p1)
+            let userData = {   
+                usuario: uIn,
+                pwd: p1,
+                registro: Date.now()
+            }
 
 
             
-            fetch('https://daw-api.herokuapp.com/users', {
-                method: 'POST',
-                body: {"ejemplo": "ejemplo"}
-            }).then(res=>res.json())
-            .then(result=>{
-                console.log('Success', result)
-                // window.location.assign('../login/login.html')
-            })
-            .catch(result=>{
-                alert('Error', result)
-            })
+            fetch('https://daw-api.herokuapp.com/users/')
+                .then(res=>res.json())
+                .then(data=>{
+                    let currentId = data.length
+                    let userData = {
+                        id: currentId + 1,
+                        usuario: uIn,
+                        pwd: p1,
+                        registro: Date.now(),
+                        record: [],
+                        rutinas: [],
+                        imc: ""
+                    }
+
+                    fetch('https://daw-api.herokuapp.com/users/', {
+                        method: 'POST',
+                        headers: {
+                            "Content-type" : "application/json"
+                        },
+                        body: JSON.stringify(userData)
+                    }).then(res=>{
+                        console.log('Success', res)
+                        window.location.assign("../login/login.html")
+                    })
+                    .catch(res=>console.log('Error', res))
+                }).catch(res=>console.log('Error', res))
         }
     }
     

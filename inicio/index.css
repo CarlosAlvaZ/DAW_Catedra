@@ -169,7 +169,7 @@ main > .title {
     margin: 40px auto;
     width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .card {
@@ -188,6 +188,7 @@ main > .title {
     height: 40%;
     display: flex;
     padding: 10px;
+    margin-bottom: 30px;
 }
 
 

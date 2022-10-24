@@ -1,7 +1,10 @@
 const usuarioInp = document.querySelector('.usuario')
 const pwdInp = document.querySelector('.pwd')
 const ingresar = document.querySelector('.ingresar')
-const google = document.querySelector('.google')
+
+function onSignIn(googleUser){
+    console.log(JSON.stringify(googleUser.getBasicProfile()))
+}
 
 ingresar.addEventListener('click', (e)=>{
     let uIn = usuarioInp.value

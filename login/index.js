@@ -1,10 +1,7 @@
 const usuarioInp = document.querySelector('.usuario')
 const pwdInp = document.querySelector('.pwd')
 const ingresar = document.querySelector('.ingresar')
-
-function onSignIn(googleUser){
-    console.log(JSON.stringify(googleUser.getBasicProfile()))
-}
+const google = document.querySelector('.google')
 
 ingresar.addEventListener('click', (e)=>{
     let uIn = usuarioInp.value
@@ -49,4 +46,8 @@ ingresar.addEventListener('click', (e)=>{
     }
 
         
+})
+
+google.addEventListener('click', (e)=>{
+    console.log('Esta funcionalidad no fue inplementada puesto que justo este año Google ha vuelto obsoleta la forma comun de hacer uso de su API oAuth2, y la documentación de la nueva forma hace uso predominantemente de react y angular, no presentando opciones para Vainilla JS, por lo que esta funcionalidad será presentada en la segunda entrega, cuando hayamos migrado esta aplicación hacia React.js')
 })
